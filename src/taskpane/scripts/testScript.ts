@@ -66,6 +66,10 @@ export const testScript = async () => {
       infoRow.values = [[`getRow: ${zzz.getLastRow()}`]];
       infoRow.format.fill.color = "orange";
       await context.sync();
+
+      const testRow = sheet.getCell(2, 2);
+      testRow.format.fill.color = "black";
+      await context.sync();
       // console.log(zzz.getLastRow());
 
       //   const range = workbook.getSelectedRange();
